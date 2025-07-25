@@ -1,0 +1,22 @@
+# .github/workflows/deploy.yml
+name: Deploy (Simulated)
+
+on:
+  push:
+    branches:
+      - main  # mainブランチにpushされたとき実行
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Simulated deployment
+        run: |
+          echo "🎉 This is a simulated deployment!"
+          echo "🕒 Time: $(date)"
+          echo "📦 Files:"
+          ls -la
+
